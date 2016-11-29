@@ -1,4 +1,4 @@
-package com.swetha.stella;
+package com.android.stella;
 
 
 
@@ -18,7 +18,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.swetha.stella.AddressFromLatLng.*;
+import com.android.stella.AddressFromLatLng.*;
 
 import android.location.LocationListener;
 
@@ -97,7 +97,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     Button btn_speak;
 
     Intent touistAttrIntent;
-    public static final String MAPQUESTRESPONSE = "com.swetha.stella.MAPQUESTRESPONSE";
+    public static final String MAPQUESTRESPONSE = "com.android.stella.MAPQUESTRESPONSE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

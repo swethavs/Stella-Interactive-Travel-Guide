@@ -25,7 +25,7 @@
             android:layout_weight="1"
             android:gravity="center"
 
-            android:text="Stella- Interactive Travel Guide"
+            android:text="@string/title"
         android:background="@color/aero_blue"
         android:textSize="@dimen/lots_list_text_size"
         android:textColor="@color/black"

@@ -1,4 +1,4 @@
-package com.swetha.stella;
+package com.android.stella;
 
 import org.junit.Test;
 

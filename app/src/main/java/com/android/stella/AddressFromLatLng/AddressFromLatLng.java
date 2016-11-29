@@ -1,4 +1,4 @@
-package com.swetha.stella.AddressFromLatLng;
+package com.android.stella.AddressFromLatLng;
 
 
 import android.content.Context;

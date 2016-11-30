@@ -16,34 +16,172 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.android.stella.MainActivity">
 
+        <fragment
+            android:id="@+id/map"
+            android:layout_height="230dp"
+            android:layout_width="match_parent"
+            tools:context=".MainActivity"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_alignParentTop="true">
+        </fragment>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/table"
+            android:layout_below="@+id/map"
+            android:orientation="vertical"
+            android:background="@drawable/tables"
+            android:scaleType="fitXY">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:text="@string/locs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="3" />
+
+                <TextView
+                    android:id="@+id/tv_chosen_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:hint="@string/locs_here" />
+
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="#716f6f" />
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_radius"
+                    android:text="@string/radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="3"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_chosen_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:hint="@string/rad_miles" />
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="#716f6f" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_search"
+                    android:text="@string/string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:layout_weight="3"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_chosen_search_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:hint="@string/string"/>
+
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="#716f6f" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal">
+
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="#716f6f" />
+
+                <Button
+                    android:id="@+id/speak_button"
+                    android:layout_width="500dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_span="2"
+                    android:background="@drawable/icon_10_speak"
+                    android:clickable="true"
+                    android:textColor="#ffffff" />
+
+            </TableRow>
+        </TableLayout>
+
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:layout_below="@+id/table"
             app:srcCompat="@drawable/wheel"
             android:scaleType="fitXY" />
+
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="33dp"
             android:text="@string/opening_text"
             android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_below="@+id/table"
+            android:layout_centerHorizontal="true" />
+
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="19dp"
             android:text="@string/own"
             android:textColor="#ffffff"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true" />
+
 
         <ImageView
             android:id="@+id/imageView2"
@@ -147,12 +285,10 @@
             android:textColor="#ffffff"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:layout_marginBottom="60dp"
-            android:layout_marginRight="9dp"
-            android:layout_marginEnd="9dp"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/textView10"
             android:layout_alignRight="@+id/textView4"
-            android:layout_alignEnd="@+id/textView4" />
+            android:layout_alignEnd="@+id/textView4"
+            android:layout_marginTop="10dp" />
 
 
     </RelativeLayout>

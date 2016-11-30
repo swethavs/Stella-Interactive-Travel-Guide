@@ -13,4 +13,10 @@
     <string name="ribs2">At Your Destination</string>
     <string name="events">CURIOUS ABOUT EVENTS ?</string>
     <string name="dest">I Can Help Too</string>
+    <string name="s_button">Press to Say City</string>
+    <string name="locs">Location: </string>
+    <string name="locs_here">Location</string>
+    <string name="radius">Radius: </string>
+    <string name="rad_miles">Radius in miles</string>
+    <string name="string">Query Type</string>
 </resources>

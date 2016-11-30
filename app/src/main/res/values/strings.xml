@@ -7,4 +7,10 @@
     <string name="s_by">Searching by: </string>
     <string name="opening_text">TELL ME WHERE ?</string>
     <string name="own">Own The Adventure</string>
+    <string name="take_v">YOU\'VE DREAMT ABOUT IT</string>
+    <string name="real">Let Me Help Your Decision</string>
+    <string name="ribs">I WILL FIND GREAT A RIBS PLACE</string>
+    <string name="ribs2">At Your Destination</string>
+    <string name="events">CURIOUS ABOUT EVENTS ?</string>
+    <string name="dest">I Can Help Too</string>
 </resources>

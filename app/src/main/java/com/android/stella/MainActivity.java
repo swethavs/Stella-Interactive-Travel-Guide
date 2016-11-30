@@ -23,6 +23,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         fontSetter("robot.ttf", R.id.textView4);
         fontSetter("universe.ttf", R.id.textView5);
+        fontSetter("robot.ttf", R.id.textView3);
+        fontSetter("universe.ttf", R.id.textView6);
+        fontSetter("robot.ttf", R.id.textView7);
+        fontSetter("universe.ttf", R.id.textView8);
+        fontSetter("robot.ttf", R.id.textView10);
+        fontSetter("universe.ttf", R.id.textView12);
     }
 
     private void fontSetter(String fontName, int textViewId) {

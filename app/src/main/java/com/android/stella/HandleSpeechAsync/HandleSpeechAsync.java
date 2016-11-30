@@ -1,11 +1,11 @@
-/*package com.swetha.stella.HandleSpeechAsync;
+/*package com.android.stella.HandleSpeechAsync;
 
 
 import android.content.Context;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 
-import com.swetha.stella.MainActivity;
+import com.android.stella.MainActivity;
 
 import java.util.Locale;
 import java.util.logging.Level;

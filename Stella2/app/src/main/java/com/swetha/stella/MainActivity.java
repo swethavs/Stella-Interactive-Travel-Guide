@@ -623,12 +623,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if((tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("currentlocation") || tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("location") ||
                 tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("near me") || tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("near"))&& latitude !=0 && longitude !=0){
             url="https://www.mapquestapi.com/search/v2/radius?shapePoints="+
-                    latitude+","+longitude + "&radius=" + radius +"&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key=NKFhx5F063cGMqmi4NQ1n39tgZ0GjdaK";
+                    latitude+","+longitude + "&radius=" + radius +"&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key=key";
 
         }
         else {
             url = "https://www.mapquestapi.com/search/v2/radius?origin=" +
-                    tv_location1.getText().toString().replace(" ", "") + "&radius=" + radius + "&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key=NKFhx5F063cGMqmi4NQ1n39tgZ0GjdaK";
+                    tv_location1.getText().toString().replace(" ", "") + "&radius=" + radius + "&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key=key";
         }
         URL obj;
 

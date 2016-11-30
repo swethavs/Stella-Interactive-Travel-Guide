@@ -117,7 +117,7 @@ public class TouristAttractionActivity extends ListActivity implements TextToSpe
     }
 
     public void onBackPressed(){
-        finish();
+       // finish();
         Intent intent= new Intent(TouristAttractionActivity.this, MainActivity.class);
         startActivity(intent);
     }

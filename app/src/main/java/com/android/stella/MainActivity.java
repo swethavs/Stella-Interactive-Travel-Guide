@@ -89,8 +89,7 @@ public class MainActivity extends AppCompatActivity
     public static final Logger LOGGER = Logger.getLogger(MainActivity.class.getName());
     String welcomeSpeechpart1 = "Welcome to Stella, an interactive travel guide assistant. You need to enable location to access this app.";
     String welcomeSpeechpart2 = "With this app you can find the tourist attractions, restaurants, and many more at your intended destination";
-    String welcomeSpeechpart3 = "You need to enable the location to access this app." +
-            "Let's get started.";
+    String welcomeSpeechpart3 = "Let's get started.";
     String chooseLocationSpeech = "Please tell me a US city name. You can say current location if you want to look for tourist attractions near you";
     String chooseRadiusSpeech="Please choose radius in miles";
     String sayYesOrNoSpeech = "say yes to confirm. To change location say location.";

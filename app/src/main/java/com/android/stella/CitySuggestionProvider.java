@@ -41,13 +41,14 @@ public class CitySuggestionProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
         if (cities == null || cities.isEmpty()){
-            Log.d("NGVL", "WEB");
+            Log.d("stella", "WEB");
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url("http://web.cecs.pdx.edu/~obidele/final.json")
                     .build();
 
             try {
+                Log.d("some", request.toString());
                 Response response = client.newCall(request).execute();
                 String jsonString = response.body().string();
                 JSONArray jsonArray = new JSONArray(jsonString);

@@ -87,10 +87,9 @@ public class MainActivity extends AppCompatActivity
 
     static int currentSpeechState= MainActivity.SPEECH_RECOGNITION_CODE_LOCATION;
     public static final Logger LOGGER = Logger.getLogger(MainActivity.class.getName());
-    String welcomeSpeechpart1 = "Welcome to Stella, an interactive travel guide assistant. You need to enable location to access this app.";
+    String welcomeSpeechpart1 = "Hi I'm Stella, an interactive travel guide assistant. You need to enable location to access this app.";
     String welcomeSpeechpart2 = "With this app you can find the tourist attractions, restaurants, and many more at your intended destination";
-    String welcomeSpeechpart3 = "You need to enable the location to access this app." +
-            "Let's get started.";
+    String welcomeSpeechpart3 = "Let's get started.";
     String chooseLocationSpeech = "Please tell me a US city name. You can say current location if you want to look for tourist attractions near you";
     String chooseRadiusSpeech="Please choose radius in miles";
     String sayYesOrNoSpeech = "say yes to confirm. To change location say location.";
@@ -608,11 +607,11 @@ public class MainActivity extends AppCompatActivity
         if((tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("currentlocation") || tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("location") ||
                 tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("near me") || tv_location1.getText().toString().replace(" ","").equalsIgnoreCase("near"))&& latitude !=0 && longitude !=0){
             url="https://www.mapquestapi.com/search/v2/radius?shapePoints="+
-                    latitude+","+longitude + "&radius=" + radius +"&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key=key";
+                    latitude+","+longitude + "&radius=" + radius +"&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key="+"9uF5DAGd4DIqfh2e4vw5BQ30AyC2HyeN";
         }
         else {
             url = "https://www.mapquestapi.com/search/v2/radius?origin=" +
-                    tv_location1.getText().toString().replace(" ", "") + "&radius=" + radius + "&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key=key";
+                    tv_location1.getText().toString().replace(" ", "") + "&radius=" + radius + "&maxMatches=25&ambiguities=ignore&hostedData=mqap.ntpois|group_sic_code=?|"+seachTypeCode+"&outFormat=json&key="+"9uF5DAGd4DIqfh2e4vw5BQ30AyC2HyeN";
         }
 
         OkHttpClient client = new OkHttpClient();
@@ -626,7 +625,7 @@ public class MainActivity extends AppCompatActivity
 
             if(jsonString.contains("searchResults")){
                 touistAttrIntent= new Intent(MainActivity.this, TouristAttractionActivity.class);
-                touistAttrIntent.putExtra(MAPQUESTRESPONSE, response.toString());
+                touistAttrIntent.putExtra(MAPQUESTRESPONSE, jsonString);
                 startActivity(touistAttrIntent);
 
             }

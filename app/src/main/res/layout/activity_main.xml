@@ -42,22 +42,22 @@
                 <TextView
                     android:id="@+id/tv_location"
                     android:text="@string/locs"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dip"
                     android:paddingRight="15dip"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_weight="3" />
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_chosen_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:hint="@string/locs_here" />
 
@@ -73,23 +73,22 @@
                 <TextView
                     android:id="@+id/tv_radius"
                     android:text="@string/radius"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dip"
                     android:paddingRight="15dip"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_weight="3"
-                    />
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_chosen_radius"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="2"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:hint="@string/rad_miles" />
                 <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="#716f6f" />
@@ -104,22 +103,22 @@
                 <TextView
                     android:id="@+id/tv_search"
                     android:text="@string/string"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dip"
                     android:paddingRight="15dip"
-                    android:layout_weight="3"
+                    android:layout_weight="1.5"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_chosen_search_type"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
                     android:textColor="#ffffff"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:hint="@string/string"/>
 
@@ -133,14 +132,17 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal">
 
-                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="#716f6f" />
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="@null" />
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="@null" />
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="@null" />
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="@null" />
+                <View android:layout_width="fill_parent" android:layout_height="1dip" android:background="@null" />
 
                 <Button
                     android:id="@+id/speak_button"
-                    android:layout_width="500dp"
+                    android:layout_width="100dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_span="2"
                     android:background="@drawable/icon_10_speak"
                     android:clickable="true"
                     android:textColor="#ffffff" />

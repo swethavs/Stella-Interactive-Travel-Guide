@@ -19,4 +19,5 @@
     <string name="radius">Radius: </string>
     <string name="rad_miles">Radius in miles</string>
     <string name="string">Query Type</string>
+    <string name="tour">Here are some Tourist attractions</string>
 </resources>

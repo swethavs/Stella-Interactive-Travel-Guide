@@ -7,12 +7,14 @@ import java.util.logging.Level;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 
 import android.widget.ListAdapter;
 
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -37,7 +39,9 @@ public class TouristAttractionActivity extends ListActivity implements TextToSpe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_attractions);
+        fontSetter("IDroid.otf", R.id.textView1);
         Intent displayIntent = getIntent();
+
         try {
             json = new JSONObject(displayIntent.getStringExtra(MainActivity.MAPQUESTRESPONSE));
             jarray = json.getJSONArray("searchResults");
@@ -68,6 +72,13 @@ public class TouristAttractionActivity extends ListActivity implements TextToSpe
 
         }
     }
+
+    private void fontSetter(String fontName, int textViewId) {
+        TextView myTextView = (TextView) findViewById(textViewId);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/"+fontName);
+        myTextView.setTypeface(typeface);
+    }
+
     /**
      * Callback for speech recognition activity
      * */
@@ -117,7 +128,7 @@ public class TouristAttractionActivity extends ListActivity implements TextToSpe
     }
 
     public void onBackPressed(){
-        finish();
+        /*finish();*/
         Intent intent= new Intent(TouristAttractionActivity.this, MainActivity.class);
         startActivity(intent);
     }

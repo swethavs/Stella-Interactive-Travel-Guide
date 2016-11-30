@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@color/aero_blue" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Tourist attractions near you"
+                android:background="@color/aero_blue"
+                android:textSize="@dimen/lots_list_text_size"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:drawSelectorOnTop="true"
+                android:scrollbarSize="12dp"
+                android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+                android:scrollbarFadeDuration="0"/>
+            <!-- 320dp, 360 -->
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:visibility="invisible" />
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+</LinearLayout>

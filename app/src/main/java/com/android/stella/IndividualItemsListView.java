@@ -1,16 +1,15 @@
-package com.swetha.stella;
+/*
+package com.android.stella;
 
 
-        import android.content.Context;
-        import android.graphics.Color;
-        import android.graphics.Typeface;
-        import android.util.Log;
-        import android.view.Gravity;
-        import android.view.View;
-        import android.widget.ImageView;
-        import android.widget.LinearLayout;
-        import android.widget.RadioButton;
-        import android.widget.TextView;
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class IndividualItemsListView extends LinearLayout {
     private static final String  TAG = "IndividualItemInListView";
@@ -26,10 +25,12 @@ public class IndividualItemsListView extends LinearLayout {
         this.setOrientation(HORIZONTAL);
         thisTextSelected = textSelected;
         // add image
-        /*ImageView myImage = new ImageView(context);
+        */
+/*ImageView myImage = new ImageView(context);
         myImage.setImageResource(R.drawable.rsz_parkinglotsign);
         addView(myImage, new LinearLayout.LayoutParams(
-                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));*/
+                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));*//*
+
 
         //add  textview
         thisText = new TextView(context);
@@ -78,4 +79,4 @@ public class IndividualItemsListView extends LinearLayout {
     public boolean getSelected() {
         return thisTextSelected.getSelected();
     }
-}
+}*/

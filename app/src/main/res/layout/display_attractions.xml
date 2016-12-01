@@ -7,13 +7,14 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@drawable/tables">
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:background="@color/aero_blue" >
+            android:background="@null" >
 
             <TextView
                 android:id="@+id/textView1"
@@ -21,11 +22,23 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
-                android:text="Tourist attractions near you"
-                android:background="@color/aero_blue"
-                android:textSize="@dimen/lots_list_text_size"
-                android:textColor="@color/black"
+                android:text="@string/tour"
+                android:background="@null"
+                android:textSize="16sp"
+                android:textColor="#ffff"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow10"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@null" >
+
+            <View android:layout_width="fill_parent" android:layout_height="5dp" android:background="@null" />
+            <View android:layout_width="fill_parent" android:layout_height="5dp" android:background="@null" />
+            <View android:layout_width="fill_parent" android:layout_height="5dp" android:background="@null" />
+
         </TableRow>
 
         <TableRow
@@ -35,7 +48,7 @@
 
             <ListView
                 android:id="@android:id/list"
-                android:layout_width="320dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:drawSelectorOnTop="true"

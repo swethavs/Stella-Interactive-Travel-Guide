@@ -626,6 +626,8 @@ public class MainActivity extends AppCompatActivity
             if(jsonString.contains("searchResults")){
                 touistAttrIntent= new Intent(MainActivity.this, TouristAttractionActivity.class);
                 touistAttrIntent.putExtra(MAPQUESTRESPONSE, jsonString);
+                touistAttrIntent.putExtra("searchType", tv_searchType1.getText().toString());
+
                 startActivity(touistAttrIntent);
 
             }

@@ -35,13 +35,15 @@ public class TouristAttractionActivity extends ListActivity implements TextToSpe
     public static final String distancekey="distancekey";
     public static final String  placeNameKey="placeName";
     private static final String afterDisplayResultSpeech="The results are displayed on the screen";
+    TextView tv_searchType;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_attractions);
         fontSetter("IDroid.otf", R.id.textView1);
         Intent displayIntent = getIntent();
-
+        tv_searchType = (TextView) findViewById(R.id.textView1);
+        tv_searchType.setText("Here are some " + displayIntent.getStringExtra("searchType"));
         try {
             json = new JSONObject(displayIntent.getStringExtra(MainActivity.MAPQUESTRESPONSE));
             jarray = json.getJSONArray("searchResults");
